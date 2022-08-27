@@ -11,6 +11,14 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+/*
+app.use((req, res, next)=>{
+  console.log({req});
+  console.log({res});
+  next();
+})
+***/
+
 app.use(router);
 
 // Create http server and run it
